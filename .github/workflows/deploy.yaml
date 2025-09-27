@@ -9,10 +9,16 @@ on:
   pull_request:
     types:
       - opened
+#env:
+  #Node-v: 22.16.0
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Print version node
+        run echo "Node version: ${{ vars.NODE_VERSION }}"
+      - name: print API key
+        run echo "API key: ${{ secrets.API_KEY }}"
       - name: Clone repo
         uses: actions/checkout@v5
 
