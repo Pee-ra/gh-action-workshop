@@ -16,9 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print version node
-        run echo "Node version: ${{ vars.NODE_VERSION }}"
+        run echo "Node version:${{ vars.NODE_VERSION }}"
       - name: print API key
-        run echo "API key: ${{ secrets.API_KEY }}"
+        run echo "API key:${{ secrets.API_KEY }}"
       - name: Clone repo
         uses: actions/checkout@v5
 
